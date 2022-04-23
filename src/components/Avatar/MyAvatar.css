@@ -1,0 +1,15 @@
+.myAvatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+.tickImg {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 12vh;
+  right: 91vw;
+}

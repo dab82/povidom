@@ -1,0 +1,35 @@
+.messageBody {
+  height: 67vh;
+  overflow: scroll;
+}
+.userMessage {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.avatarMessage {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-size: contain;
+  background: rgb(243, 236, 236);
+}
+.inputMessage {
+  display: block;
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
+  margin-right: 5px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  background: #2f4f4f;
+  color: #fff;
+}
+.dateMessage {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-left: 12px;
+}

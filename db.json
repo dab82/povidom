@@ -1,0 +1,60 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "AAAAAAA",
+      "image": "https://cdn-icons-png.flaticon.com/128/12/12160.png",
+      "read": true
+    },
+    {
+      "id": 2,
+      "name": "BBBBB",
+      "image": "https://cdn-icons-png.flaticon.com/128/107/107975.png",
+      "read": true
+    },
+    {
+      "id": 3,
+      "name": "CCCCCCCCCC",
+      "image": "https://cdn-icons-png.flaticon.com/128/6616/6616297.png",
+      "read": true
+    }
+  ],
+  "messages": [
+    {
+      "chatId": 1,
+      "text": "Bob is my cat",
+      "date": "01/25/22 6:26 PM",
+      "id": 1
+    },
+    {
+      "chatId": 1,
+      "text": "Chuck Norris can read the whole bible in one day.",
+      "date": "01/25/22 6:26 PM",
+      "id": 2
+    },
+    {
+      "chatId": 2,
+      "text": "Luc is my cat",
+      "date": "01/25/22 6:27 PM",
+      "id": 3
+    },
+    {
+      "chatId": 2,
+      "text": "Chuck Norris is Luke Skywalker's real father.",
+      "date": "01/25/22 6:27 PM",
+      "id": 4
+    },
+    {
+      "chatId": 3,
+      "text": "Brovko is dog!",
+      "date": "01/25/22 6:27 PM",
+      "id": 5
+    },
+    {
+      "chatId": 3,
+      "text": "Chuck Norris' penis wears a cowboy hat.",
+      "date": "01/25/22 6:27 PM",
+      "id": 6
+    }
+  ]
+}

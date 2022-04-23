@@ -1,0 +1,39 @@
+.usersList {
+  display: flex;
+  align-items: center;
+  height: calc((80vh - 150px) / 4);
+  border-bottom: 1px solid gray;
+}
+
+.usersAvatar {
+  width: 70px;
+  height: 70px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-size: contain;
+  background: rgb(243, 236, 236);
+}
+.usersName {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.lm {
+  display: block;
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+}
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+  color: gray;
+}
+.data {
+  margin-top: 0;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  color: rgb(92, 87, 87);
+}
