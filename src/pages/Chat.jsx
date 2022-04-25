@@ -1,11 +1,9 @@
-import { Sidebar } from 'components/Sidebar/SideBar';
-import { FieldMessages } from 'components/FieldMessages';
-
+import { SideBar } from 'components/SideBar/SideBar';
+import { FieldMessages } from 'components/FieldMessages/FieldMessage';
 import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router';
-import { fetchAllContacts, fetchAllMessages } from '../services/contactsAPI';
-
-import { MessageContext } from '../context/lastMessage';
+import { fetchContacts, fetchMessages } from 'services/chatAPI';
+import { MessageContext } from 'common/MessageContext';
 
 export const Chat = () => {
   const [users, setUsers] = useState([]);
@@ -14,24 +12,24 @@ export const Chat = () => {
   );
 
   useEffect(() => {
-    fetchAllContacts().then(res => setUsers(res.data));
+    fetchContacts().then(res => setUsers(res.data));
   }, []);
 
   useEffect(() => {
-    fetchAllMessages().then(res => {
+    fetchMessages().then(res => {
       localStorage.setItem('messages', JSON.stringify(res.data));
       setMessages(res.data);
     });
-  }, [messages]);
+  }, []);
 
   return (
-    <>
+    <div style={{ display: 'flex' }}>
       <MessageContext.Provider value={{ messages }}>
-        <Sidebar users={users} />
+        <SideBar users={users} />
         <Routes>
-          <Route path="chats/:id" element={<FieldMessages />} />
+          <Route path="chat/:id" element={<FieldMessages />} />
         </Routes>
       </MessageContext.Provider>
-    </>
+    </div>
   );
 };

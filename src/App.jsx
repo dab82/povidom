@@ -1,24 +1,23 @@
-import { RiChatSmile2Line } from 'react-icons/ri';
-// import { Chat } from 'pages/Chat';
+import { Chat } from 'pages/Chat';
+import { Routes, Route } from 'react-router-dom';
+import { SignIn } from 'pages/SignIn';
+import { Toaster } from 'react-hot-toast';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from 'services/firebase';
 
 export const App = () => {
+  const [user] = useAuthState(auth);
   return (
-    <>
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          // justifyContent: 'center',
-          // alignItems: 'center',
-          fontSize: 40,
-          textTransform: 'uppercase',
-          color: '#0f8696',
-        }}
-      >
-        P<RiChatSmile2Line />
-        VIDOM
-      </div>
-      {/* <Chat /> */}
-    </>
+    <div>
+      <Routes>
+        {user ? (
+          <Route path="chat/*" element={<Chat />} />
+        ) : (
+          <Route path="/" element={<SignIn />} />
+        )}
+        <Route path="*" element={<SignIn />} />
+      </Routes>
+      <Toaster position="top-right" />
+    </div>
   );
 };

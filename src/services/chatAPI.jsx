@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-// axios.defaults.baseURL = 'https://server-kopa.herokuapp.com';
-axios.defaults.baseURL = 'https://my-json-server.typicode.com/dab82/chat';
-const URLNorris = 'https://api.chucknorris.io/jokes/random';
+axios.defaults.baseURL = 'https://povidom-chat.herokuapp.com/';
+const URLChuckNorris = 'https://api.chucknorris.io/jokes/random';
 
-export const fetchAllContacts = () => {
+export const fetchContacts = () => {
   return axios.get(`/contacts`);
 };
 
@@ -16,10 +15,10 @@ export const fetchAddMessage = message => {
   return axios.post(`/messages`, message);
 };
 
-export const fetchAllMessages = () => {
+export const fetchMessages = () => {
   return axios.get(`/messages`);
 };
 
 export const fetchChuckNorris = () => {
-  return axios.get(`${URLNorris}`);
+  return axios.get(`${URLChuckNorris}`);
 };

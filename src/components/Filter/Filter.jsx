@@ -1,3 +1,5 @@
+import './Filter.css';
+
 export const Filter = ({ value, onChange }) => {
   return (
     <>
@@ -8,7 +10,6 @@ export const Filter = ({ value, onChange }) => {
           placeholder="Search chat"
           value={value}
           onChange={onChange}
-          style={{ width: 300 }}
         />
       </label>
     </>

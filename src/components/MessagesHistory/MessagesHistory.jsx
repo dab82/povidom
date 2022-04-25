@@ -1,11 +1,11 @@
-import './MessageHistory.css';
-import { MessageContext } from '../../context/lastMessage';
+import { MessageContext } from 'common/MessageContext';
 import { useContext } from 'react';
+import './MessagesHistory.css';
 
 export const MessagesHistory = ({ user }) => {
   const { messages } = useContext(MessageContext);
 
-  const userMessages = messages.filter(m => m.chatId === user.id);
+  const userMessages = messages.filter(message => message.chatId === user.id);
 
   return (
     <div className="messageBody">

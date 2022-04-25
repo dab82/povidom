@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { User } from 'components/User/User';
+import { MessageContext } from 'common/MessageContext';
 import './UserList.css';
 
 export const UserList = ({ users }) => {
-  const { messages } =
-    useContext();
-    // MessageContext
+  const { messages } = useContext(MessageContext);
 
   return (
     <>
@@ -14,7 +13,7 @@ export const UserList = ({ users }) => {
       <ul>
         {users.map(({ id, image, name }) => (
           <Link
-            to={`chats/${id}`}
+            to={`chat/${id}`}
             className="link"
             key={id}
             style={{ textDecoration: 'none', color: 'inherit' }}

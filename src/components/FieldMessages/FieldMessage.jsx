@@ -1,16 +1,15 @@
-import ChatName from 'components/ChatName/ChatName';
-import SendMessagesField from 'components/SendMessagesField/SendMessagesField';
-import MessagesHistory from 'components/MessagesHistory/MessagesHistory';
-import './FieldMessage.css';
-
-import { useState, useEffect } from 'react';
+import { ChatName } from 'components/ChatName/ChatName';
+import { SendMessagesField } from 'components/SendMessagesField/SendMessagesField';
+import { MessagesHistory } from 'components/MessagesHistory/MessagesHistory';
+import { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   fetchContactById,
   fetchAddMessage,
   fetchChuckNorris,
-} from '../../services/contactsAPI';
+} from 'services/chatAPI';
 import moment from 'moment';
+import './FieldMessage.css';
 
 export const FieldMessages = () => {
   const [user, setUser] = useState([]);
@@ -24,19 +23,19 @@ export const FieldMessages = () => {
     const message = {
       chatId: Number(id),
       text,
-      date: moment().format('MM/DD/YY LT'),
+      date: moment().format('DD.MM.YYYY LT'),
     };
     fetchAddMessage(message);
 
     fetchChuckNorris().then(res => {
       setTimeout(() => {
-        const message2 = {
+        const messageAnswer = {
           chatId: Number(id),
           text: res.data.value,
           date: moment().format('MM/DD/YY LT'),
         };
-        fetchAddMessage(message2);
-      }, 10000);
+        fetchAddMessage(messageAnswer);
+      }, 5000);
     });
   };
 

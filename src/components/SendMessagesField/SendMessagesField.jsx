@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IoSendOutline } from 'react-icons/io';
+
 import './SendMessagesField.css';
 
 export const SendMessagesField = ({ onSubmit }) => {
@@ -34,7 +34,6 @@ export const SendMessagesField = ({ onSubmit }) => {
           autoComplete="off"
           onChange={handleChange}
         />
-        <IoSendOutline />
       </form>
     </div>
   );
