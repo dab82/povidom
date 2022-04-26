@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/povidom/static/css/main.62478531.css",
-    "main.js": "/povidom/static/js/main.91e240e1.js",
+    "main.css": "/povidom/static/css/main.f5d93135.css",
+    "main.js": "/povidom/static/js/main.2f8396fe.js",
     "static/media/deadpool.jpg": "/povidom/static/media/deadpool.651a021cd6acf5313b03.jpg",
     "index.html": "/povidom/index.html",
-    "main.62478531.css.map": "/povidom/static/css/main.62478531.css.map",
-    "main.91e240e1.js.map": "/povidom/static/js/main.91e240e1.js.map"
+    "main.f5d93135.css.map": "/povidom/static/css/main.f5d93135.css.map",
+    "main.2f8396fe.js.map": "/povidom/static/js/main.2f8396fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.62478531.css",
-    "static/js/main.91e240e1.js"
+    "static/css/main.f5d93135.css",
+    "static/js/main.2f8396fe.js"
   ]
 }
