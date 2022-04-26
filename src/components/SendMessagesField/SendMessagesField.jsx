@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { AiOutlineSend } from 'react-icons/ai';
 import './SendMessagesField.css';
 
 export const SendMessagesField = ({ onSubmit }) => {
@@ -34,6 +34,9 @@ export const SendMessagesField = ({ onSubmit }) => {
           autoComplete="off"
           onChange={handleChange}
         />
+        <button className="btnSendMessage">
+          <AiOutlineSend size={20} />
+        </button>
       </form>
     </div>
   );

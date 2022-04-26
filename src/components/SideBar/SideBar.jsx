@@ -27,8 +27,8 @@ export const SideBar = ({ users }) => {
         <div className="sidebarLogo">
           <MyAvatar />
           <p className="logo">
-            P<RiChatSmile2Line />
-            VIDOM
+            Povid
+            <RiChatSmile2Line />m
           </p>
 
           <Link to="/">

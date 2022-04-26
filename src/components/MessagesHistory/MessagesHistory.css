@@ -1,6 +1,15 @@
 .messageBody {
   height: 60vh;
-  overflow: scroll;
+  overflow-y: auto;
+  background: repeating-radial-gradient(circle, #f1f6f7, transparent 20%);
+  background-size: 1em 1em;
+  background-color: #ffffff;
+  scrollbar-color: #2f4f4f #dde0e0;
+  scrollbar-width: thin;
+}
+.messageList {
+  margin: 0;
+  padding: 10px;
 }
 .userMessage {
   display: flex;
@@ -18,18 +27,18 @@
 }
 .inputMessage {
   display: block;
-  font-size: 16px;
-  padding: 10px 10px 10px 10px;
-  margin-right: 5px;
+  font-size: medium;
+  font-weight: 500;
+  padding: 10px 20px;
   margin-top: 10px;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 40px;
-  background: #2f4f4f;
+  background: #808383;
   color: #fff;
 }
 .dateMessage {
   display: block;
-
+  text-align: end;
   margin-top: 5px;
   margin-bottom: 0;
   margin-left: 12px;

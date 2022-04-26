@@ -1,5 +1,5 @@
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from 'services/firebase';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { auth } from 'services/firebase';
 import avatar from 'img/deadpool.jpg';
 import './MyAvatar.css';
 

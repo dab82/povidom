@@ -6,6 +6,9 @@ const URLChuckNorris = 'https://api.chucknorris.io/jokes/random';
 export const fetchContacts = () => {
   return axios.get(`/contacts`);
 };
+// export const fetchAddUser = contact => {
+//   return axios.post(`/contacts`, contact);
+// };
 
 export const fetchContactById = id => {
   return axios.get(`/contacts/${id}`);

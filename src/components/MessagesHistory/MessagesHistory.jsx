@@ -9,18 +9,27 @@ export const MessagesHistory = ({ user }) => {
 
   return (
     <div className="messageBody">
-      <ul>
+      <ul className="messageList">
         {userMessages.map(({ id, date, text }) => (
           <li key={id} className="userMessage">
             {id % 2 === 0 && (
-              <img
-                src={user.image}
-                alt="user avatar"
-                className="avatarMessage"
-              />
+              <img src={user.image} alt="avatar" className="avatarMessage" />
             )}
-            <div style={{ marginLeft: id % 2 === 0 ? '0' : 'auto' }}>
-              <div className="inputMessage"> {text}</div>
+            <div
+              style={{
+                marginLeft: id % 2 === 0 ? '0' : 'auto',
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: id % 2 === 0 ? '#2f4f4f' : '#dde0e0',
+                  color: id % 2 === 0 ? 'white' : 'black',
+                }}
+                className="inputMessage"
+              >
+                {' '}
+                {text}
+              </div>
               <h6 className="dateMessage"> {date}</h6>
             </div>
           </li>

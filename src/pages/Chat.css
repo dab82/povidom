@@ -1,0 +1,14 @@
+.chatPage {
+  display: flex;
+  border-radius: 10px;
+  border-bottom: 2px solid grey;
+  background: repeating-radial-gradient(circle, #f1f6f7, transparent 20%);
+  background-size: 1em 1em;
+  background-color: #ffffff;
+}
+
+@media (max-width: 540px) {
+  .chatPage {
+    flex-direction: column;
+  }
+}
