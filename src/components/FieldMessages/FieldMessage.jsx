@@ -1,7 +1,7 @@
 import { ChatName } from 'components/ChatName/ChatName';
 import { SendMessagesField } from 'components/SendMessagesField/SendMessagesField';
 import { MessagesHistory } from 'components/MessagesHistory/MessagesHistory';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   fetchContactById,

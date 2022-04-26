@@ -11,15 +11,15 @@ export const Chat = () => {
   const [messages, setMessages] = useState(
     JSON.parse(localStorage.getItem('messages')) ?? []
   );
-  const [display, setDisplay] = useState({
-    matches: window.innerWidth > 540 ? true : false,
-  });
+  // const [display, setDisplay] = useState({
+  //   matches: window.innerWidth > 540 ? true : false,
+  // });
 
-  useEffect(() => {
-    let mediaQuery = window.matchMedia('(min-width: 540px)');
-    mediaQuery.addListener(setDisplay);
-    return () => mediaQuery.removeListener(setDisplay);
-  }, []);
+  // useEffect(() => {
+  //   let mediaQuery = window.matchMedia('(min-width: 540px)');
+  //   mediaQuery.addListener(setDisplay);
+  //   return () => mediaQuery.removeListener(setDisplay);
+  // }, []);
 
   useEffect(() => {
     fetchContacts().then(res => setUsers(res.data));
