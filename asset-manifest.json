@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/povidom/static/css/main.f5d93135.css",
-    "main.js": "/povidom/static/js/main.2f8396fe.js",
+    "main.css": "/povidom/static/css/main.d8595ea3.css",
+    "main.js": "/povidom/static/js/main.57737eb0.js",
     "static/media/deadpool.jpg": "/povidom/static/media/deadpool.651a021cd6acf5313b03.jpg",
+    "static/media/Povidom.webp": "/povidom/static/media/Povidom.3c9a1ed9a1feb50b83b3.webp",
     "index.html": "/povidom/index.html",
-    "main.f5d93135.css.map": "/povidom/static/css/main.f5d93135.css.map",
-    "main.2f8396fe.js.map": "/povidom/static/js/main.2f8396fe.js.map"
+    "main.d8595ea3.css.map": "/povidom/static/css/main.d8595ea3.css.map",
+    "main.57737eb0.js.map": "/povidom/static/js/main.57737eb0.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5d93135.css",
-    "static/js/main.2f8396fe.js"
+    "static/css/main.d8595ea3.css",
+    "static/js/main.57737eb0.js"
   ]
 }
