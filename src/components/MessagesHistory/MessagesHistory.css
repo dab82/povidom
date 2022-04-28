@@ -1,6 +1,8 @@
 .messageBody {
-  height: 60vh;
+  min-height: 400px;
+  max-height: 70vh;
   overflow-y: auto;
+  justify-content: flex-start;
   background: repeating-radial-gradient(circle, #f1f6f7, transparent 20%);
   background-size: 1em 1em;
   background-color: #ffffff;

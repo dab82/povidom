@@ -22,6 +22,10 @@ export const fetchMessages = () => {
   return axios.get(`/messages`);
 };
 
+export const fetchMessagesById = chatId => {
+  return axios.get(`/messages/${chatId}`);
+};
+
 export const fetchChuckNorris = () => {
   return axios.get(`${URLChuckNorris}`);
 };

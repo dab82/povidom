@@ -1,4 +1,3 @@
-import moment from 'moment';
 import './User.css';
 
 export const User = ({ id, image, name, messages }) => {
@@ -14,7 +13,7 @@ export const User = ({ id, image, name, messages }) => {
           <h3 className="usersName">{name}</h3>
           <p className="text">{lastMessage.text}</p>
         </div>
-        <p className="data">{moment(lastMessage.date).format('LL')}</p>
+        <p className="data">{lastMessage.date}</p>
       </li>
     </>
   );

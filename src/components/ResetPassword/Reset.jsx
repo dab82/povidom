@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { auth, sendPasswordReset } from '../../services/firebase';
+import { auth, sendPasswordReset } from 'services/firebase';
 import './Reset.css';
 
 export const Reset = () => {
   const [email, setEmail] = useState('');
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (loading) return;
-    if (user) navigate('/dashboard');
+    if (user) navigate('/chat');
   }, [user, loading, navigate]);
 
   return (

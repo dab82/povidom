@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { User } from 'components/User/User';
 import { MessageContext } from 'common/MessageContext';
-import { SpinnerCircular } from 'spinners-react';
+import { SpinnerDiamond } from 'spinners-react';
 import './UserList.css';
 
 export const UserList = ({ users }) => {
@@ -24,10 +24,10 @@ export const UserList = ({ users }) => {
         ))}
       </ul>
       <div className="addUserWrapper">
-        <SpinnerCircular
+        <SpinnerDiamond
           color="#246a80"
-          secondaryColor="rgba(0,0,0,0.1)"
-          speed="50"
+          secondaryColor="rgba(1, 3, 160, 0.2)"
+          speed="80"
         />
       </div>
     </>

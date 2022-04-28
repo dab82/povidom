@@ -11,15 +11,15 @@ export const Chat = () => {
   const [messages, setMessages] = useState(
     JSON.parse(localStorage.getItem('messages')) ?? []
   );
-  // const [display, setDisplay] = useState({
-  //   matches: window.innerWidth > 540 ? true : false,
-  // });
+  const [display, setDisplay] = useState({
+    matches: window.innerWidth > 540 ? true : false,
+  });
 
-  // useEffect(() => {
-  //   let mediaQuery = window.matchMedia('(min-width: 540px)');
-  //   mediaQuery.addListener(setDisplay);
-  //   return () => mediaQuery.removeListener(setDisplay);
-  // }, []);
+  useEffect(() => {
+    let mediaQuery = window.matchMedia('(min-width: 540px)');
+    mediaQuery.addListener(setDisplay);
+    return () => mediaQuery.removeListener(setDisplay);
+  }, []);
 
   useEffect(() => {
     fetchContacts().then(res => setUsers(res.data));
@@ -32,18 +32,25 @@ export const Chat = () => {
     });
   }, [messages]);
 
+  const show = display && display.matches;
+
   return (
     <div className="chatPage">
       <MessageContext.Provider value={{ messages }}>
-        <SideBar className="split left" users={users} />
-        {/* {display && display.matches && ( */}
-        <Routes>
-          <Route
-            path="chat/:id"
-            element={<FieldMessages className="split right" />}
-          />
-        </Routes>
-        {/* )} */}
+        {show && (
+          <>
+            <SideBar users={users} />
+            <Routes>
+              <Route path="chat/:id" element={<FieldMessages />} />
+            </Routes>
+          </>
+        )}
+        {!show && (
+          <Routes>
+            <Route path="/" element={<SideBar users={users} />} />
+            <Route path="chat/:id" element={<FieldMessages />} />
+          </Routes>
+        )}
       </MessageContext.Provider>
     </div>
   );

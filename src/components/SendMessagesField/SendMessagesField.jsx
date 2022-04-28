@@ -7,14 +7,10 @@ export const SendMessagesField = ({ onSubmit }) => {
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;
-    switch (name) {
-      case 'text':
-        setText(value);
-        break;
-
-      default:
-        return;
+    if (name === 'text') {
+      setText(value);
     }
+    return;
   };
 
   const handleSubmit = e => {

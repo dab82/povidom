@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { RiChatSmile2Line } from 'react-icons/ri';
 import { Filter } from 'components/Filter/Filter';
 import { UserList } from 'components/UserList/UserList';
 import { SignOut } from 'components/SignOut/SignOut';
-import './SideBar.css';
 import { MyAvatar } from 'components/Avatar/MyAvatar';
+import povidom from 'img/Povidom.webp';
+import './SideBar.css';
 
 export const SideBar = ({ users }) => {
   const [filter, setFilter] = useState('');
@@ -26,11 +26,7 @@ export const SideBar = ({ users }) => {
       <div className="sidebarHeader">
         <div className="sidebarLogo">
           <MyAvatar />
-          <p className="logo">
-            Povid
-            <RiChatSmile2Line />m
-          </p>
-
+          <img src={povidom} alt="logo" className="logo" />
           <Link to="/">
             <SignOut />
           </Link>

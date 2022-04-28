@@ -32,9 +32,10 @@
   color: #808080;
 }
 .data {
-  margin: 0;
+  margin: 0 0 auto auto;
+  padding: 10px;
   white-space: nowrap;
   text-align: end;
-  font-weight: bold;
+
   color: #5c5757;
 }

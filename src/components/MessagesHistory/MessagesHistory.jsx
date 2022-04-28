@@ -1,9 +1,18 @@
 import { MessageContext } from 'common/MessageContext';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
+
 import './MessagesHistory.css';
 
 export const MessagesHistory = ({ user }) => {
   const { messages } = useContext(MessageContext);
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const userMessages = messages.filter(message => message.chatId === user.id);
 
@@ -35,6 +44,7 @@ export const MessagesHistory = ({ user }) => {
           </li>
         ))}
       </ul>
+      <div ref={messagesEndRef} />
     </div>
   );
 };
